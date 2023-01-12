@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Welcome!",
+    "text": "This is the first note",
+    "id": "e03c9bab-9a84-4199-b7bf-0ec6920a8e73"
+  },
+  {
+    "title": "Click me!",
+    "text": "Notice how you can see me on the right now!",
+    "id": "d38552c3-69d6-41fe-b7a5-4b94505398ae"
+  },
+  {
+    "title": "Delete me",
+    "text": "Poof!",
+    "id": "168f3a18-b048-4b11-bf35-f22a72c54575"
+  }
+]
