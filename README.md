@@ -23,7 +23,10 @@ A note taking app built using express
 
 ## **Tools**
 
-Express, Javascript, Node
+- Express
+- Javascript
+- Node
+- Railway
 
 ## **Motivation**
 
@@ -59,9 +62,9 @@ Add your screenshots here:
 
 ## **Links**
 
-Add any relevant links for this project below:
+Live site below:
 
-[Your Website](URL)
+[Note Taker](https://note-taker-production-2d5e.up.railway.app/)
 
 ## License
 
