@@ -1,17 +1,17 @@
 [
   {
     "title": "Welcome!",
-    "text": "This is the first note",
-    "id": "e03c9bab-9a84-4199-b7bf-0ec6920a8e73"
+    "text": "This a note.",
+    "id": "ee3e805e-81cf-4db5-aba2-9538af246812"
   },
   {
-    "title": "Click me!",
-    "text": "Notice how you can see me on the right now!",
-    "id": "d38552c3-69d6-41fe-b7a5-4b94505398ae"
+    "title": "Click me! ",
+    "text": "See how I populated on the right side!",
+    "id": "fa0abbb1-5787-4caf-b7eb-e4f894ea0620"
   },
   {
-    "title": "Delete me",
-    "text": "Poof!",
-    "id": "168f3a18-b048-4b11-bf35-f22a72c54575"
+    "title": "Delete me!",
+    "text": "I will be gone forever :{",
+    "id": "c5a7b7ef-efba-463c-b6f9-cab3eb2d0469"
   }
 ]
