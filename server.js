@@ -3,7 +3,7 @@ const path = require("path");
 const notesRoute = require("./routes/notes.js");
 
 const PORT = process.env.PORT || 3001;
- 
+
 const app = express();
 // Middleware
 app.use(express.json());
