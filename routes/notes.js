@@ -10,7 +10,7 @@ app.use(express.static("public"));
 // GET request for all requested notes
 // below we just have '/' because in our server we are pointing '/api/notes'
 router.get("/", (req, res) => {
-  // log our request to our terminal
+  // log our request to terminal
   console.info(`${req.method} request for notes received`);
   // returns requested data
   return res.status(200).json(db);
@@ -35,9 +35,10 @@ router.post("/", (req, res) => {
   // shows the that a POST req was received
   console.info(`${req.method} request received to save new note`);
 
-  // destructure props from request body
+  // destructure title and text props from request body
   const { title, text } = req.body;
   if (title && text) {
+    // create a new note
     const newNote = {
       title,
       text,
@@ -56,8 +57,8 @@ router.post("/", (req, res) => {
           err ? console.error(err) : console.log("Successfully Saved Note")
         );
       }
-      
     });
+    // creates a response message
     const response = {
       status: "Success",
       body: newNote,
@@ -69,18 +70,33 @@ router.post("/", (req, res) => {
   }
 });
 
-// TODO: add functionality to remove requested data from DB
+// Delete request
 router.delete("/:id", (req, res) => {
   console.info(`${req.method} request received`);
-  
+  // deconstruct id from request params
   const { id } = req.params;
-  
-    db.forEach((scannedNote) => {
-      if (id === scannedNote.id) {
-        res.status(200).json(`deleting ${scannedNote.title}`);
-        db.splice(db.indexOf(scannedNote))
-      }
-    });
+
+  db.forEach((scannedNote) => {
+    // scan db and check if request matches any note ID. If not throw error
+    if (id === scannedNote.id) {
+      res.status(200).json(`Removing ${scannedNote.title} from notes`);
+      // Read File adn writes file
+      fs.readFile("./db/db.json", "utf8", (err) => {
+        if (err) {
+          console.error(err);
+        } else {
+          // Remove selected note from db and update db
+          db.splice(db.indexOf(scannedNote.id));
+          fs.writeFile("./db/db.json", JSON.stringify(db), (err) =>
+            err ? console.error(err) : console.info("Successfully removed note")
+          );
+        }
+      });
+    } else {
+      // will show you each note in db side by side id you are trying to delete
+      console.error(`${scannedNote.id} doesn't match ${id}`);
+    }
+  });
 });
 
 module.exports = router;
