@@ -66,7 +66,7 @@ router.post('/', (req, res) => {
     };
     console.info(response);
     db.push(newNote);
-    res.status(200).json(response);
+    return res.status(200).json(db);
   } else {
     res.status(500).json('error saving note');
   }
@@ -81,7 +81,7 @@ router.delete('/:id', (req, res) => {
   db.forEach((scannedNote) => {
     // scan db and check if request matches any note ID. If not throw error
     if (id === scannedNote.id) {
-      res.status(200).json(`Removing ${scannedNote.title} from notes`);
+      // res.status(200).json(`Removing ${scannedNote.title} from notes`);
       // Read File adn writes file
       fs.readFile('./db/db.json', 'utf8', (err) => {
         if (err) {
@@ -95,6 +95,7 @@ router.delete('/:id', (req, res) => {
         }
       });
       db.splice(db.indexOf(scannedNote.id));
+      return res.status(200).json(db)
     } else {
       // will show you each note in db side by side id you are trying to delete
       console.error(`${scannedNote.id} doesn't match ${id}`);
