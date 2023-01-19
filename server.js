@@ -22,7 +22,7 @@ app.get('/notes', (req, res) => {
 });
 // retrieves landing page
 app.get('/', (req, res) =>
-  res.sendFile(path.join(__dirname, 'public/index.html'))
+res.sendFile(path.join(__dirname, 'public/index.html'))
 );
 // responds with 404 if page isn't available on server
 app.get('*', (req, res) => res.status(404).send('Page not found'));
