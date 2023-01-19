@@ -1,17 +1,1 @@
-[
-  {
-    "title": "Welcome!",
-    "text": "This a note.",
-    "id": "ee3e805e-81cf-4db5-aba2-9538af246812"
-  },
-  {
-    "title": "Click me! ",
-    "text": "See how I populated on the right side!",
-    "id": "fa0abbb1-5787-4caf-b7eb-e4f894ea0620"
-  },
-  {
-    "title": "Delete me!",
-    "text": "I will be gone forever :{",
-    "id": "c5a7b7ef-efba-463c-b6f9-cab3eb2d0469"
-  }
-]
+[{"title":"Welcome","text":"Hi!","id":"0f5c55a6-ebe4-4554-8b49-d307d4361bd2"},{"title":"Delete me!","text":"Bye!","id":"58b0589f-d489-42f4-a6e2-e836c6c280d1"}]
