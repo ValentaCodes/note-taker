@@ -19,7 +19,7 @@
 
 ## **Description**
 
-A note taking app built using express
+A note taking app that allows users to create, update, and delete notes.
 
 ## **Tools**
 
@@ -30,7 +30,7 @@ A note taking app built using express
 
 ## **Motivation**
 
-To learn how backend technologies work and to gain a better understanding of server-side programming.
+I recently learned how backend technologies like express and server-side APIs play a crucial role in today's web dev ecosystem. I wanted to test my new skills and reinforce what I've been learning by building my first server and deploying it to a platform.
 
 ## **Installation**
 
@@ -42,15 +42,13 @@ Type a note, click save, delete note if you need to.
 
 ## **Contribution**
 
-N/A
+See contact information below
 
 ## **Testing**
 
 N/A
 
 ## **Screenshots**
-
-Add your screenshots here:
 
 ![Homepage](./assets/Screen%20Shot%202023-01-12%20at%203.35.35%20PM.png)
 
